@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 import dj_database_url
+import  django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,7 +27,7 @@ SECRET_KEY = '+=mb2q!t+yg7(m$!_$iki#2*z(+ub^lcas0jx$l2-dp%bp8pt)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['koralcity.herokuapp.com', '127.0.0.1','koralcity.org','www.koralcity.org']
+ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -144,7 +145,7 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-
+django_heroku.settings(locals())
 
 from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
