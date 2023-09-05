@@ -7,7 +7,8 @@ from realtors.models import Realtor
 # Create your views here.
 def index(request):
 	listings = Listing.objects.order_by('-list_date').filter(is_published=True);
-	return render(request , 'pages/index.html',{'listings' : listings ,
+	return render(request , 'pages/index.html',{
+     	'listings' : listings ,
         'state_choices' : state_choices,
         'bedroom_choices' : bedroom_choices,
         'price_choices' : price_choices,
