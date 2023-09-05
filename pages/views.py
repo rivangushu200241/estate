@@ -6,7 +6,7 @@ from realtors.models import Realtor
 
 # Create your views here.
 def index(request):
-	listings = Listing.all();
+	listings = Listing.objects.all();
 	return render(request ,'pages/index.html',{
      	'listings' : listings,
         'state_choices' : state_choices,
