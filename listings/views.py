@@ -4,7 +4,7 @@ from django.http import HttpResponse
 
 from listings.choices import price_choices , bedroom_choices , state_choices, type_choices
 
-from .models import Listing
+from listings.models import Listing
 
 # Create your views here
 def index(request):
